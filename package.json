@@ -1,7 +1,7 @@
 {
   "name": "utrix",
-  "description": "the 24/7 powerful bot!",
-  "version": "0.0.0",
+  "description": "testing",
+  "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
@@ -10,4 +10,3 @@
     "discord.js": "11.1.0",
     "request": "2.81.0"
   }
-}
