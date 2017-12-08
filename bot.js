@@ -1,16 +1,21 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+    console.log('I am ready!');
 });
 
-const prefix = 'u$'
-
-client.on('message', msg => {
-  if (msg.content === `${prefix}help) {
-    msg.reply('this bot is still in pre-alpha, with only this command so far.');
-  }
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.channel.send('PONG!');
+  	}
 });
 
-client.login('process.env.BOT_TOKEN');
+client.on('message', message => {
+    if (message.content === 'bing') {
+    	message.reply('BONG!');
+  	}
+});
+
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
